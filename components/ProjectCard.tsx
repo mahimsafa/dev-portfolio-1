@@ -3,7 +3,7 @@ import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { IProject } from "../types";
 
-import Image from "next/image";
+import Image, { ImageLoader } from "next/image";
 
 const ProjectCard: FunctionComponent<{
   project: IProject;
@@ -19,12 +19,16 @@ const ProjectCard: FunctionComponent<{
   },
 }) => {
     const [showDetail, setShowDetail] = useState(false);
+    const myLoader: ImageLoader = ({ src, width, quality }) => {
+      return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+    }
 
     return (
       <div>
-        <Image
+        < Image
           src={image_path}
           alt={name}
+          loader={myLoader}
           className="cursor-pointer"
           onClick={() => setShowDetail(true)}
           layout="responsive"
@@ -37,7 +41,7 @@ const ProjectCard: FunctionComponent<{
         className="cursor-pointer"
         onClick={() => setShowDetail(true)}
       /> */}
-        <p className="my-2 text-center">{name}</p>
+        <p className="my-2 text-center" > {name}</p >
 
         {showDetail && (
           <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
@@ -47,6 +51,7 @@ const ProjectCard: FunctionComponent<{
               <Image
                 src={image_path}
                 alt={name}
+                loader={myLoader}
                 layout="responsive"
                 height="150"
                 width="300"
@@ -93,8 +98,9 @@ const ProjectCard: FunctionComponent<{
             </button>
           </div>
         )}
-      </div>
+      </div >
     );
   };
+
 
 export default ProjectCard;
