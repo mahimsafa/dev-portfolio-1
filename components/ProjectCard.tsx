@@ -3,7 +3,7 @@ import { AiFillGithub, AiFillProject } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { IProject } from "../types";
 
-import Image, { ImageLoader } from "next/image";
+import Image from "next/image";
 
 const ProjectCard: FunctionComponent<{
   project: IProject;
@@ -19,16 +19,12 @@ const ProjectCard: FunctionComponent<{
   },
 }) => {
     const [showDetail, setShowDetail] = useState(false);
-    const myLoader: ImageLoader = ({ src, width, quality }) => {
-      return `https://example.com/${src}?w=${width}&q=${quality || 75}`
-    }
 
     return (
       <div>
         < Image
           src={image_path}
           alt={name}
-          loader={myLoader}
           className="cursor-pointer"
           onClick={() => setShowDetail(true)}
           layout="responsive"
@@ -51,7 +47,6 @@ const ProjectCard: FunctionComponent<{
               <Image
                 src={image_path}
                 alt={name}
-                loader={myLoader}
                 layout="responsive"
                 height="150"
                 width="300"

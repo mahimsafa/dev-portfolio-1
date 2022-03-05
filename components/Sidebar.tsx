@@ -1,22 +1,17 @@
 import { GoLocation } from "react-icons/go";
-import { useTheme } from "next-themes";
-import Image, { ImageLoader } from "next/image";
+import Image from "next/image";
 
 import { myDetails } from "../data";
 
 import Toggle from "../components/ThemeToggle";
 
 const Sidebar = () => {
-  const myLoader: ImageLoader = ({ src, width, quality }) => {
-    return `https://example.com/${src}?w=${width}&q=${quality || 75}`
-  }
 
   return (
     <>
       <Image
         src="/images/mahim.png"
         alt="avatar"
-        loader={myLoader}
         className=" mx-auto border rounded-full "
         height="155px"
         width="155px"
