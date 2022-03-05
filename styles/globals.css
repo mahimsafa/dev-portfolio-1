@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   font-family: sans-serif;
+   color: #354358;
+}
+
+/* //TODO put this in document */
+/* body {
+   background-color: black;
+} */
+
+@layer components {
+   .custom-scrollbar {
+      overflow-y: scroll;
+   }
+
+   .custom-scrollbar::-webkit-scrollbar {
+      width: 0.5em;
+   }
+
+   .custom-scrollbar::-webkit-scrollbar-track {
+      @apply bg-gray-600 rounded-full
+   }
+   
+   .custom-scrollbar::-webkit-scrollbar-thumb {
+      /* outline: 1px solid slategrey; */
+      @apply bg-green rounded-full
+   }
+}
