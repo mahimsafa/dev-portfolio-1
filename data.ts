@@ -10,8 +10,8 @@ import { BsCircleFill } from "react-icons/bs";
 
 export const myDetails =  {
   name: "Mahim Safa",
-  title: "Full Stack Developer",
-  description: "I am a full stack developer with a passion for building web applications. I have a strong background in front-end development and have worked with a wide range of technologies. I am currently working on a project.",
+  title: "Developer",
+  description: "I am a developer and cyber security expert with a passion for building applications and securing then. I have a strong background in security and have worked with a wide range of technologies. I am a self taught developer and I am always looking to learn new things and improve my skills.",
   email: 'hi@mahimsafa.com',
   phone: '',
   address: 'Dhaka, Bangladesh',
