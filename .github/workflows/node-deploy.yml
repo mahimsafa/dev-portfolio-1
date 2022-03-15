@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Installing my packages
-        run: npm ci
+        run: npm i
 
       - name: Building the App
         run: npm run deploy && touch ./out/.nojekyll
