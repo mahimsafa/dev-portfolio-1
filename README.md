@@ -1,5 +1,3 @@
-# Developer Portfolio
+# Mahim Portfolio
 
-### Developer Portfolio made with Next JS Framer Motion and TypeScript.
-
-My personal portfolio site
+If you are still viewing this page please visit: [mahimsafa.com](https://mahimsafa.com)
