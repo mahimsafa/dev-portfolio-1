@@ -1,5 +1,7 @@
 import { GoLocation } from "react-icons/go";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai'
 
 import { myDetails } from "../data";
 
@@ -9,20 +11,24 @@ const Sidebar = () => {
 
   return (
     <>
+    {/* <div className="border-dashed mx-auto border-red" style={{width: '160px', height: '160px'}}> */}
+
       <Image
         src="/images/mahim.png"
         alt="avatar"
-        className=" mx-auto border rounded-full "
+        className=" mx-auto border-dashed rounded-full "
         height="155px"
         width="155px"
         layout="intrinsic"
+        // layout="fill" 
         quality="100"
-      />
+        />
+        {/* </div> */}
       <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
         <span className="text-green ">Mahim</span> Safa
       </h3>
       <p className="px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200 dark:bg-black-500">
-        Developer, DevOps <br/>&<br/> Cyber Security Expert
+        Developer, DevOps <br />&<br /> Cyber Security Expert
       </p>
       {/* Resume */}
       {/* <a
@@ -59,20 +65,33 @@ const Sidebar = () => {
         <div className="flex items-center justify-center">
           <GoLocation className="mr-2" /> <span>{myDetails.address} </span>
         </div>
-        <p className="my-2 "> {myDetails.email} </p>
-        <p className="my-2"> {myDetails.phone} </p>
+        <div className="flex items-center justify-center">
+          <AiOutlineMail className="mr-2" /> <span>{myDetails.email} </span>
+        </div>
+
+        {myDetails.phone &&
+
+          <div className="flex items-center justify-center">
+            <AiOutlinePhone className="mr-2" /> <span>{myDetails.phone} </span>
+          </div>
+        }
       </div>
 
       {/* Email Button */}
 
       <div className="flex justify-center my-5 flex-col items-center gap-5">
-      <button
-        className="w-8/12 px-5 py-2 text-white rounded-full cursor-pointer bg-green hover:scale-105 focus:outline-none"
-        onClick={() => location.href = (`mailto:${myDetails.email}`)}
-      >
-        Email me
-      </button>
-      <Toggle />
+        <motion.button
+          whileHover={{
+            scale: 1.05,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          className="w-8/12 px-5 py-2 text-white rounded-full cursor-pointer bg-green hover:scale-105 focus:outline-none"
+          onClick={() => location.href = (`mailto:${myDetails.email}`)}
+        >
+          Email me
+        </motion.button>
+        <Toggle />
       </div>
     </>
   );

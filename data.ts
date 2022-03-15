@@ -210,6 +210,7 @@ export const tools: Skill[] = [
 
 export const projects: IProject[] = [
   { 
+    id: 1,
     name: "Real Time Video Chat",
     description:
       "This app allows two users to video chat with each other in real time.",
@@ -220,6 +221,7 @@ export const projects: IProject[] = [
     key_techs: ["React", "Socket.io", "Node JS", "Express", "MongoDB", "Heroku"],
   },
   { 
+    id: 2,
     name: "FlutterFire Note",
     description:
       "This is a clone of Google Keep note application. User can read, create, update, delete notes. It is developed using flutter.",
@@ -230,6 +232,7 @@ export const projects: IProject[] = [
     key_techs: ['Flutter', 'Dart', 'Firebase', 'Google Auth', 'Google Cloud Firestore'],
   },
   { 
+    id: 3,
     name: "Mail Bomber",
     description:
       "Using this tool one can send huge number of mails to a targeted person and flood their inbox.",
@@ -240,6 +243,7 @@ export const projects: IProject[] = [
     key_techs: ['Python', 'SMTP Protocol',],
   },
   { 
+    id: 4,
     name: "Web Scrapper",
     description:
       "This is a demo tool for data mining from web. It can scrape data from a website and save it in a database.",

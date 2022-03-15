@@ -1,11 +1,13 @@
 import Bar from "../components/Bar";
 import { frameworks, tools } from "../data";
+import { routeAnimation } from "../animation";
+import { motion } from "framer-motion";
 
 import Head from "next/head";
 
 const Skills = () => {
   return (
-    <>
+    <motion.div variants={routeAnimation} initial='initial' animate='animate' exit='exit'>
     <Head>
         <title>Skills | Mahim Safa</title>
       </Head>
@@ -32,7 +34,7 @@ const Skills = () => {
         </div>
       </div>
     </div>
-    </>
+    </motion.div>
   );
 };
 

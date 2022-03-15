@@ -1,9 +1,13 @@
 import { education, experience } from "../data";
 import Head from "next/head";
+import { motion } from "framer-motion";
+import { fadeInUp, routeAnimation } from "../animation";
 
 const Career = () => {
+
+
   return (
-    <>
+    <motion.div variants={routeAnimation} initial='initial' animate='animate' exit='exit'>
       <Head>
         <title>Career | Mahim Safa</title>
       </Head>
@@ -11,7 +15,7 @@ const Career = () => {
         {/* //! Education & Experience */}
         <div className="grid gap-6 md:grid-cols-2">
           {/* Experience */}
-          <div className="">
+          <motion.div variants={fadeInUp} initial='initial' animate='animate'>
             <h5 className="my-3 text-2xl font-bold text-green ">Experience</h5>
             {
               experience.map((item, index) => (
@@ -34,11 +38,11 @@ const Career = () => {
                 </div>
               ))
             }
-          </div>
+          </motion.div>
 
 
           {/* Edication */}
-          <div>
+          <motion.div variants={fadeInUp} initial='initial' animate='animate'>
             <h5 className="my-3 text-2xl font-bold text-green">Education</h5>
             {
               education.map((item, index) => (
@@ -54,13 +58,13 @@ const Career = () => {
                 </div>
               ))
             }
-          </div>
+          </motion.div>
 
 
         </div>
 
       </div>
-    </>
+    </motion.div>
   );
 };
 
