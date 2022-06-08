@@ -210,6 +210,17 @@ export const tools: Skill[] = [
 
 export const projects: IProject[] = [
   { 
+    id: 4,
+    name: "Reddit Clone (Fullstack)",
+    description:
+      "This is a full-stack Reddit build. It's frontend is desined with React (Next Js) and backend with Node Js. Two databases are used, one is MongoDB which is used for authentication and the other is PostgreSQL for storing other data. It's a single page application and it's responsive. It's frontend is hosted on Vercel and backend is hosted on Stepzen. For database MongoDB is hosted on Mongo Atlas and PostgreSQL is hosted on Supabase.",
+    image_path: "/images/reddit-clone.png",
+    deployed_url: "https://reddit-clone-ivory.vercel.app/",
+    github_url: "https://github.com/mahimsafa/reddit-clone",
+    category: ["web", "development"],
+    key_techs: ['Node Js', 'Next Js', 'Tailwind CSS', 'Headless UI', 'GraphQL', 'Apollo', 'MongoDB', 'Postgres', 'Supabase', 'NextAuth', 'Stepzen'],
+  },
+  { 
     id: 1,
     name: "Real Time Video Chat",
     description:
@@ -242,15 +253,5 @@ export const projects: IProject[] = [
     category: ["scripting", 'cybersecurity'],
     key_techs: ['Python', 'SMTP Protocol',],
   },
-  { 
-    id: 4,
-    name: "Web Scrapper",
-    description:
-      "This is a demo tool for data mining from web. It can scrape data from a website and save it in a database.",
-    image_path: "https://raw.githubusercontent.com/mahimsafa/Web-Scraping-Demo/master/poc.png",
-    deployed_url: "https://www.youtube.com/watch?v=bJ00wuIBiWs",
-    github_url: "https://github.com/mahimsafa/Web-Scraping-Demo",
-    category: ["scripting"],
-    key_techs: ['Python', 'Selenium', 'BeautifulSoup'],
-  },
+  
 ];
