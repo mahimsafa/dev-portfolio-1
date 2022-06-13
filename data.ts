@@ -221,6 +221,17 @@ export const projects: IProject[] = [
     key_techs: ['Node Js', 'Next Js', 'Tailwind CSS', 'Headless UI', 'GraphQL', 'Apollo', 'MongoDB', 'Postgres', 'Supabase', 'NextAuth', 'Stepzen'],
   },
   { 
+    id: 5,
+    name: "React Fitness App",
+    description:
+      "This is a frondend fitness application using vannila React. Frontend is designed with Material UI and css. For fetching backend data I used Rapid API It's a single page application and it's responsive..",
+    image_path: "/images/reddit-clone.png",
+    deployed_url: "https://reddit-clone-ivory.vercel.app/",
+    github_url: "https://github.com/mahimsafa/reddit-clone",
+    category: ["web", "development"],
+    key_techs: ['React Js','CSS', 'Material UI', 'Rapid API'],
+  },
+  { 
     id: 1,
     name: "Real Time Video Chat",
     description:
