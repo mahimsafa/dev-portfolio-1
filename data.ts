@@ -225,9 +225,9 @@ export const projects: IProject[] = [
     name: "React Fitness App",
     description:
       "This is a frondend fitness application using vannila React. Frontend is designed with Material UI and css. For fetching backend data I used Rapid API It's a single page application and it's responsive..",
-    image_path: "/images/reddit-clone.png",
-    deployed_url: "https://reddit-clone-ivory.vercel.app/",
-    github_url: "https://github.com/mahimsafa/reddit-clone",
+    image_path: "https://camo.githubusercontent.com/746abd821ec7c0224f27176a2ea5c698157b05aaa1f58390059629bf6644dae9/68747470733a2f2f692e6962622e636f2f597439737047632f696d6167652e706e67",
+    deployed_url: "https://exquisite-salamander-0b9b1d.netlify.app/",
+    github_url: "https://github.com/mahimsafa/react-fitness-app",
     category: ["web", "development"],
     key_techs: ['React Js','CSS', 'Material UI', 'Rapid API'],
   },
