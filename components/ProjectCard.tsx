@@ -25,7 +25,7 @@ const ProjectCard: FunctionComponent<{
   showDetail,
   setShowDetail,
 }) => {
-  const [variant, setVariant] = useState(fadeInUp);
+    const [variant, setVariant] = useState(fadeInUp);
 
 
 
@@ -43,20 +43,22 @@ const ProjectCard: FunctionComponent<{
         <p className="my-2 text-center" > {name}</p >
 
         {showDetail === id && (
-          <motion.div 
-          variants={variant} initial='initial' animate='animate'
-          className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 md:p-10 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
+          <motion.div
+            variants={variant} initial='initial' animate='animate'
+            className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 md:p-10 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
             <div>
               <Image
                 src={image_path}
                 alt={name}
+                priority={true}
+                // placeholder='blur'
                 layout="responsive"
                 height="150"
                 width="300"
               />
-              <motion.div 
-              variants={fadeInUp} initial='initial' animate='animate'
-              className="flex justify-center my-4 space-x-3">
+              <motion.div
+                variants={fadeInUp} initial='initial' animate='animate'
+                className="flex justify-center my-4 space-x-3">
                 <a
                   href={github_url}
                   target="_blank"
@@ -64,27 +66,32 @@ const ProjectCard: FunctionComponent<{
                 >
                   <AiFillGithub /> <span>Github</span>
                 </a>
-                <a
-                  href={deployed_url}
-                  target="_blank"
-                  className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
-                >
-                  <AiFillProject /> <span>Project</span>
-                </a>
+                {
+                  deployed_url && (
+                    <a
+                      href={deployed_url}
+                      target="_blank"
+                      className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
+                    >
+                      <AiFillProject /> <span>Project</span>
+                    </a>
+                  )
+                }
+
               </motion.div>
             </div>
 
             <motion.div variants={fadeInUp} initial='initial' animate='animate'>
-              <motion.h2 
-              variants={fadeInUp} initial='initial' animate='animate'
-              className="mb-3 text-xl font-medium md:text-2xl">{name}</motion.h2>
-              <motion.h3 
-              variants={fadeInUp} initial='initial' animate='animate'
-              className="mb-3 font-medium">{description}</motion.h3>
+              <motion.h2
+                variants={fadeInUp} initial='initial' animate='animate'
+                className="mb-3 text-xl font-medium md:text-2xl">{name}</motion.h2>
+              <motion.h3
+                variants={fadeInUp} initial='initial' animate='animate'
+                className="mb-3 font-medium">{description}</motion.h3>
 
-              <motion.div 
-              variants={fadeInUp} initial='initial' animate='animate'
-              className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
+              <motion.div
+                variants={fadeInUp} initial='initial' animate='animate'
+                className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
                 {key_techs.map((tech) => (
                   <span
                     key={tech}

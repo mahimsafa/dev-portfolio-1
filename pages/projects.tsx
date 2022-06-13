@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
 import ProjectsNavbar from "../components/ProjectsNavbar";
 import { projects as projectsData } from "../data";
-import { Category } from "../types";
+import { IProject } from "../types";
 import { fadeInUp, stagger, routeAnimation } from "../animation";
 
 
@@ -14,8 +14,16 @@ const Projects = () => {
   const [active, setActive] = useState("all");
   const [showDetail, setShowDetail] = useState<number|null>(null);
   
+  // extract all strings of arrays of categories from projectData.category and store them in an array
+  const categories = projectsData.reduce((acc, project) => {
+    project.category.forEach((category) => {
+      if (!acc.includes(category)) acc.push(category);
+    });
+    return acc;
+  }
+  , ['all'] as string[]);
 
-  const handlerFilterCategory = (category: Category | "all") => {
+  const handlerFilterCategory = (category:string | "all") => {
     if (category === "all") {
       setProjects(projectsData);
       setActive(category);
@@ -38,6 +46,7 @@ const Projects = () => {
         <ProjectsNavbar
           handlerFilterCategory={handlerFilterCategory}
           active={active}
+          categories={categories}
         />
 
         <motion.div 
@@ -45,7 +54,7 @@ const Projects = () => {
         initial='initial'
         animate='animate'
         className="relative grid grid-cols-12 gap-4 my-3">
-          {projects.map((project, index) => (
+          {projects.sort((a:IProject, b:IProject)=> b.id - a.id).map((project, index) => (
             <motion.div 
             variants={fadeInUp} initial='initial' animate='animate'
             className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200" key={index}>

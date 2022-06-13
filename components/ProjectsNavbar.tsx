@@ -1,8 +1,7 @@
 import { FunctionComponent } from "react";
-import { Category } from "../types";
 
 export const NavItem: FunctionComponent<{
-  value: Category | "all";
+  value: string | "all";
   handlerFilterCategory: Function;
   active: string;
 }> = ({ value, handlerFilterCategory, active }) => {
@@ -18,16 +17,24 @@ export const NavItem: FunctionComponent<{
 
 const ProjectsNavbar: FunctionComponent<{
   handlerFilterCategory: Function;
+  categories: string[];
   active: string;
 }> = (props) => {
   return (
     <div className="flex px-3 py-2 space-x-3 overflow-x-auto list-none">
-      <NavItem value="all" {...props} />
-      <NavItem value="web" {...props} />
-      <NavItem value="mobile" {...props} />
-      <NavItem value="scripting" {...props} />
-      <NavItem value="development" {...props} />
-      <NavItem value="cybersecurity" {...props} />
+      {
+        props.categories.map((value,index) => (
+          <NavItem
+            value={value}
+            handlerFilterCategory={props.handlerFilterCategory}
+            active={props.active}
+            // {...props}
+            key={index}
+          />
+        ))
+      }
+      {/* <NavItem value="all" {...props} />
+      <NavItem value="cybersecurity" {...props} /> */}
     </div>
   );
 };

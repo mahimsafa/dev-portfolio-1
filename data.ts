@@ -209,28 +209,7 @@ export const tools: Skill[] = [
 ];
 
 export const projects: IProject[] = [
-  { 
-    id: 4,
-    name: "Reddit Clone (Fullstack)",
-    description:
-      "This is a full-stack Reddit build. It's frontend is desined with React (Next Js) and backend with Node Js. Two databases are used, one is MongoDB which is used for authentication and the other is PostgreSQL for storing other data. It's a single page application and it's responsive. It's frontend is hosted on Vercel and backend is hosted on Stepzen. For database MongoDB is hosted on Mongo Atlas and PostgreSQL is hosted on Supabase.",
-    image_path: "/images/reddit-clone.png",
-    deployed_url: "https://reddit-clone-ivory.vercel.app/",
-    github_url: "https://github.com/mahimsafa/reddit-clone",
-    category: ["web", "development"],
-    key_techs: ['Node Js', 'Next Js', 'Tailwind CSS', 'Headless UI', 'GraphQL', 'Apollo', 'MongoDB', 'Postgres', 'Supabase', 'NextAuth', 'Stepzen'],
-  },
-  { 
-    id: 5,
-    name: "React Fitness App",
-    description:
-      "This is a frondend fitness application using vannila React. Frontend is designed with Material UI and css. For fetching backend data I used Rapid API It's a single page application and it's responsive..",
-    image_path: "https://camo.githubusercontent.com/746abd821ec7c0224f27176a2ea5c698157b05aaa1f58390059629bf6644dae9/68747470733a2f2f692e6962622e636f2f597439737047632f696d6167652e706e67",
-    deployed_url: "https://exquisite-salamander-0b9b1d.netlify.app/",
-    github_url: "https://github.com/mahimsafa/react-fitness-app",
-    category: ["web", "development"],
-    key_techs: ['React Js','CSS', 'Material UI', 'Rapid API'],
-  },
+  
   { 
     id: 1,
     name: "Real Time Video Chat",
@@ -239,7 +218,7 @@ export const projects: IProject[] = [
     image_path: "https://raw.githubusercontent.com/mahimsafa/video-calling/main/vid_app.png",
     deployed_url: "https://mahims-personal-video-chat.netlify.app/",
     github_url: "https://github.com/mahimsafa/video-calling",
-    category: ["web", 'development'],
+    category: ["web", 'fullstack'],
     key_techs: ["React", "Socket.io", "Node JS", "Express", "MongoDB", "Heroku"],
   },
   { 
@@ -250,7 +229,7 @@ export const projects: IProject[] = [
     image_path: "https://raw.githubusercontent.com/mahimsafa/FlutterFire-note/main/screenshots/img6.png",
     deployed_url: "https://github.com/mahimsafa/FlutterFire-note/releases/tag/v1.0",
     github_url: "https://github.com/mahimsafa/FlutterFire-note",
-    category: ["mobile", 'development'],
+    category: ["mobile", 'fullstack'],
     key_techs: ['Flutter', 'Dart', 'Firebase', 'Google Auth', 'Google Cloud Firestore'],
   },
   { 
@@ -259,10 +238,32 @@ export const projects: IProject[] = [
     description:
       "Using this tool one can send huge number of mails to a targeted person and flood their inbox.",
     image_path: "https://raw.githubusercontent.com/MahimSafa/MailBomber/master/ebomb.png",
-    deployed_url: "#",
+    deployed_url: null,
     github_url: "https://github.com/mahimsafa/MailBomber",
-    category: ["scripting", 'cybersecurity'],
+    category: ["scrip", 'cybersecurity'],
     key_techs: ['Python', 'SMTP Protocol',],
+  },
+  { 
+    id: 4,
+    name: "Reddit Clone (Fullstack)",
+    description:
+      "This is a full-stack Reddit build. It's frontend is desined with React (Next Js) and backend with Node Js. Two databases are used, one is MongoDB which is used for authentication and the other is PostgreSQL for storing other data. It's a single page application and it's responsive. It's frontend is hosted on Vercel and backend is hosted on Stepzen. For database MongoDB is hosted on Mongo Atlas and PostgreSQL is hosted on Supabase.",
+    image_path: "/images/reddit-clone.png",
+    deployed_url: "https://reddit-clone-ivory.vercel.app/",
+    github_url: "https://github.com/mahimsafa/reddit-clone",
+    category: ["web", "fullstack"],
+    key_techs: ['Node Js', 'Next Js', 'Tailwind CSS', 'Headless UI', 'GraphQL', 'Apollo', 'MongoDB', 'Postgres', 'Supabase', 'NextAuth', 'Stepzen'],
+  },
+  { 
+    id: 5,
+    name: "React Fitness App",
+    description:
+      "This is a frondend fitness application using vannila React. Frontend is designed with Material UI and css. For fetching backend data I used Rapid API It's a single page application and it's responsive..",
+    image_path: "https://camo.githubusercontent.com/746abd821ec7c0224f27176a2ea5c698157b05aaa1f58390059629bf6644dae9/68747470733a2f2f692e6962622e636f2f597439737047632f696d6167652e706e67",
+    deployed_url: "https://exquisite-salamander-0b9b1d.netlify.app/",
+    github_url: "https://github.com/mahimsafa/react-fitness-app",
+    category: ["web", "frontend"],
+    key_techs: ['React Js','CSS', 'Material UI', 'Rapid API'],
   },
   
 ];

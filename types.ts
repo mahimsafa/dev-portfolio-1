@@ -16,9 +16,9 @@ export interface IProject {
   name: string;
   description: string;
   image_path: string;
-  deployed_url: string;
+  deployed_url: string | null;
   github_url: string;
-  category: Category[];
+  category: string[];
   key_techs: string[];
 }
 
@@ -37,5 +37,3 @@ export interface Education {
   passing_year: string;
   description: string;
 }
-
-export type Category = "web" | "development" | "cybersecurity" | 'mobile' | 'scripting' | 'other';
