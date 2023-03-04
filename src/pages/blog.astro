@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+---
+
+<Layout title="Blog">
+  <div class="my-10 pb-5 flex space-y-7 flex-col">
+    {
+      posts.map((item) => {
+        return (
+          <Card
+            slug={item.slug}
+            heading={item.data.title}
+            img={item.data.cover}
+            date={item.data.date}
+            description={item.body.slice(0,300).replace('#','')}
+            />
+            );
+          })
+        }
+  </div>
+</Layout>

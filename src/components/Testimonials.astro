@@ -1,0 +1,33 @@
+---
+import CardV3 from "./CardV3.astro";
+// @ts-ignore
+import { review } from "../content/data.ts";
+// @ts-ignore
+import type { Review } from "../content/data.ts";
+---
+
+<section class="w-full flex flex-col justify-center" id="contact">
+  <h1 class="text-red-400 text-3xl font-semibold mx-auto my-10">
+    Testimonials
+  </h1>
+  <div
+    class="w-full p-3 flex flex-col justify-center overflow-x-hidden my-10"
+    id="contact"
+  >
+    <div class="flex space-x-7 justify-center">
+      {
+        review.map((item: Review) => (
+          <CardV3
+            gender={item.gender}
+            name={item.name}
+            review={item.body}
+            ref={item.ref}
+            img={item.img}
+            role={item.role}
+            company={item.company}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

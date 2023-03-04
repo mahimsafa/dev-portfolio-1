@@ -1,0 +1,13 @@
+---
+import CardV4 from "../components/CardV4.astro";
+import Layout from "../layouts/Layout.astro";
+
+import { external } from "../content/data.ts";
+import type { External } from "../content/data.ts";
+---
+
+<Layout title="External">
+  <section class="flex flex-col space-y-4 py-5">
+    {external.map((item: External) => <CardV4 item={item} />)}
+  </section>
+</Layout>

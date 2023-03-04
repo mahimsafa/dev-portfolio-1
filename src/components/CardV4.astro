@@ -1,0 +1,20 @@
+---
+const {
+  item: { text, link, location, date },
+} = Astro.props;
+---
+
+<div
+  class="transition-all duration-150 ease-in hover:shadow w-full min-h-12 p-2 border border-gray-300 flex justify-center flex-col items-end rounded-sm"
+>
+  <div class="w-full">
+    <a
+      href={link}
+      class="hover:underline text-lg hover:text-red-400 transition-all duration-150 ease-in hover:tracking-wide"
+    >
+      {text}
+    </a>
+  </div>
+  <p class="text-xs text-gray-500">{date}</p>
+  <p class="text-xs text-gray-500">{location}</p>
+</div>
