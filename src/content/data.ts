@@ -56,7 +56,7 @@ export const external: External[] = [
     {
         text: 'Speaker at Brac University webinar on Cyber Security',
         link: 'https://www.bracu.ac.bd/news/webinar-fundamentals-cyber-security',
-        // location:'Online',
+        location:'Online',
         date: '30-06-2021'
     }
 ]

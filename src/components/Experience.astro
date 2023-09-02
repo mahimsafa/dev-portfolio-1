@@ -1,34 +1,101 @@
 ---
 import { Image } from "@astrojs/image/components";
 import ByteCapsule from "../assets/bytecapsuleit.jpeg";
+import WIYP from "../assets/wellington.png";
+import { Icon } from "astro-icon";
 ---
 
-<section class="my-10 w-full border-l border-gray-300 p-3 flex">
-    <h1 class="text-red-400 text-xl font-semibold mr-10">Experience</h1>
-    <div class="flex flex-col space-y-10">
-      <div class="">
-        <div class="flex justify-between w-full">
-          <div class="flex flex-col border-l border-gray-300">
-            <div class="mx-5">
-              <div class="flex items-center mb-1">
-                <Image src={ByteCapsule} alt="" class="h-6 w-6 mr-2" aspectRatio={1/1} fit='cover' format='avif' />
-                <h1 class="text-lg font-semibold">Byte Capsule Ltd.</h1>
-              </div>
-              <h3>Full Stack Developer</h3>
+<section
+  class="my-10 w-full border-l border-gray-300 p-3 flex flex-col md:flex-row items-center md:items-start"
+>
+  <h1 class="text-red-400 text-xl font-semibold mr-10">Experience</h1>
+  <div class="flex flex-col space-y-10">
+    <!-- Experience 1 -->
+    <div class="">
+      <div class="flex justify-between w-full">
+        <div class="flex flex-col md:border-l md:border-gray-300">
+          <div class="mx-5">
+            <div class="flex items-center mb-1">
+              <Image
+                src={WIYP}
+                alt="Wellington Logo"
+                class="h-6 w-6 mr-2"
+                fit="cover"
+                format="avif"
+              />
+              <h1 class="text-lg font-semibold flex items-center">
+                Wellington In Your Pocket
+                <span>
+                  <a href="https://wellingtoninyourpocket.co.nz/home2/" target="_blank">
+                    <Icon
+                      name="gridicons:external"
+                      class="ml-2 text-red-400"
+                      width="18"
+                    />
+                  </a>
+                </span>
+              </h1>
             </div>
+            <h3>Cloud Engineer</h3>
           </div>
-          <p class="text-gray-600">2020-2022</p>
         </div>
-        <div class="ml-5 mt-4">
-          <p class="text-sm text-gray-600">
-            As a Full Stack Developer at Byte Capsule Ltd, I optimized
-            application performance, developed and maintained a complex web
-            application using the MERN stack, and implemented new features on
-            the front-end using React. I collaborated with the product team to
-            gather requirements and helped to attract new customers with
-            improved application speed and reliability.
-          </p>
-        </div>
+        <p class="text-gray-600">Jan, 2023 - Present</p>
+      </div>
+      <div class="ml-5 mt-4">
+        <p class="text-sm text-gray-600">
+          As a Cloud Engineer at "Wellington In Your Pocket", My role involves
+          designing, implementing, and maintaining the backend architecture
+          using various AWS services. I am responsible for ensuring scalability,
+          reliability, and security of the cloud infrastructure to support the
+          application's requirements. I work closely with cross-functional teams
+          to understand project requirements and translate them into scalable
+          and robust cloud solutions that drive the application's success.
+        </p>
       </div>
     </div>
-  </section>
+
+    <!-- Experience 2 -->
+    <div class="">
+      <div class="flex justify-between w-full">
+        <div class="flex flex-col">
+          <div class="mx-5">
+            <div class="flex items-center mb-1">
+              <Image
+                src={ByteCapsule}
+                alt="Bytecapsule Logo"
+                class="h-6 w-6 mr-2"
+                aspectRatio={1 / 1}
+                fit="cover"
+                format="avif"
+              />
+              <h1 class="text-lg font-semibold flex items-center">
+                Byte Capsule Ltd.
+                <span>
+                  <a href="https://www.bytecapsuleit.com/" target="_blank">
+                    <Icon
+                      name="gridicons:external"
+                      class="ml-2 text-red-400"
+                      width="18"
+                    />
+                  </a>
+                </span>
+              </h1>
+            </div>
+            <h3>Full Stack Developer</h3>
+          </div>
+        </div>
+        <p class="text-gray-600">May, 2020 - Nov, 2022</p>
+      </div>
+      <div class="ml-5 mt-4">
+        <p class="text-sm text-gray-600">
+          As a Full Stack Developer at Byte Capsule Ltd, I optimized application
+          performance, developed and maintained a complex web application using
+          the MERN stack, and implemented new features on the front-end using
+          React. I collaborated with the product team to gather requirements and
+          helped to attract new customers with improved application speed and
+          reliability.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
-import Logo from '../assets/mahim-logo.png'
+import Logo from "../assets/mahim-logo.png";
 ---
 
 <nav
@@ -9,21 +9,30 @@ import Logo from '../assets/mahim-logo.png'
   <ul class="h-full flex justify-between items-center">
     <li>
       <!-- <div>Mahim</div> -->
-      <a href="/" class="transition-colors duration-150 ease-in hover:text-red-400">
-      <Image src={Logo} width={50} height={50} alt="Mahim Logo"
-       fit='cover'
-       />
+      <a
+        href="/"
+        class="transition-colors duration-150 ease-in hover:text-red-400"
+      >
+        <Image src={Logo} width={50} height={50} alt="Mahim Logo" fit="cover" />
       </a>
     </li>
     <li class="flex items-center space-x-4">
       <a
-        href="mailto:hi@mahimsafa.com"
-        class="mx-auto text-sm text-gray-400 hidden md:block transition-all duration-150 ease-in hover:text-red-400"
-        >Mail
-        </a>
-      <a href="/blog" class="transition-colors duration-150 ease-in hover:text-red-400">Blog</a>
-      <a href="/external" class="transition-colors duration-150 ease-in hover:text-red-400">External</a>
-  
+        href="/"
+        class="transition-colors duration-150 ease-in hover:text-red-400"
+        >Home</a
+      >
+      <a
+        href="/blog"
+        class="transition-colors duration-150 ease-in hover:text-red-400"
+        >Blog</a
+      >
+      <a
+        href="/external"
+        class="transition-colors duration-150 ease-in hover:text-red-400"
+        >External</a
+      >
+
       <button
         class="rounded transition-all duration-150 ease-in px-3 py-2 text-red-400 ring-2 ring-red-400 hover:bg-red-400 hover:text-white"
       >
