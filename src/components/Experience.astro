@@ -2,6 +2,7 @@
 import { Image } from "@astrojs/image/components";
 import ByteCapsule from "../assets/bytecapsuleit.jpeg";
 import WIYP from "../assets/wellington.png";
+import Fiverr from "../assets/fiverr-logo.png";
 import { Icon } from "astro-icon";
 ---
 
@@ -10,10 +11,56 @@ import { Icon } from "astro-icon";
 >
   <h1 class="text-red-400 text-xl font-semibold mr-10">Experience</h1>
   <div class="flex flex-col space-y-10">
-    <!-- Experience 1 -->
+    <!-- Experience 3 -->
     <div class="">
       <div class="flex justify-between w-full">
         <div class="flex flex-col md:border-l md:border-gray-300">
+          <div class="mx-5">
+            <div class="flex items-center mb-1">
+              <Image
+                src={Fiverr}
+                alt="Fiverr Logo"
+                class="h-6 w-6 mr-2"
+                fit="cover"
+                format="avif"
+              />
+              <h1 class="text-lg font-semibold flex items-center">
+                Fiverr
+                <span>
+                  <a href="https://fiverr.com/" target="_blank">
+                    <Icon
+                      name="gridicons:external"
+                      class="ml-2 text-red-400"
+                      width="18"
+                    />
+                  </a>
+                </span>
+              </h1>
+            </div>
+            <h3>Level 2 Seller</h3>
+          </div>
+        </div>
+        <p class="text-gray-600">Sept, 2022 - Present</p>
+      </div>
+      <div class="ml-5 mt-4">
+        <p class="text-sm text-gray-600">
+          I am a Level 2 seller on Fiverr, excels in AWS DevOps and MERN stack
+          development. I expertly design, deploy, and manage AWS infrastructure,
+          focusing on serverless applications using Docker, EC2, ECS, Lambda,
+          API Gateway, and DynamoDB. My proficiency in the MERN stack spans
+          MongoDB, Express.js, React, and Node.js, evident in deploying
+          e-commerce, web applications, and APIs on AWS while addressing
+          performance and security concerns. My knack for problem-solving and
+          efficiency ensures top-notch solutions in both AWS and MERN stack
+          domains.
+        </p>
+      </div>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class="">
+      <div class="flex justify-between w-full">
+        <div class="flex flex-col">
           <div class="mx-5">
             <div class="flex items-center mb-1">
               <Image
@@ -26,7 +73,10 @@ import { Icon } from "astro-icon";
               <h1 class="text-lg font-semibold flex items-center">
                 Wellington In Your Pocket
                 <span>
-                  <a href="https://wellingtoninyourpocket.co.nz/home2/" target="_blank">
+                  <a
+                    href="https://wellingtoninyourpocket.co.nz/home2/"
+                    target="_blank"
+                  >
                     <Icon
                       name="gridicons:external"
                       class="ml-2 text-red-400"
@@ -39,7 +89,7 @@ import { Icon } from "astro-icon";
             <h3>Cloud Engineer</h3>
           </div>
         </div>
-        <p class="text-gray-600">Jan, 2023 - Present</p>
+        <p class="text-gray-600">Jan, 2023 - Sept, 2023</p>
       </div>
       <div class="ml-5 mt-4">
         <p class="text-sm text-gray-600">
@@ -54,7 +104,7 @@ import { Icon } from "astro-icon";
       </div>
     </div>
 
-    <!-- Experience 2 -->
+    <!-- Experience 1 -->
     <div class="">
       <div class="flex justify-between w-full">
         <div class="flex flex-col">
@@ -81,19 +131,28 @@ import { Icon } from "astro-icon";
                 </span>
               </h1>
             </div>
-            <h3>Full Stack Developer</h3>
+            <h3>Operations Lead</h3>
           </div>
         </div>
         <p class="text-gray-600">May, 2020 - Nov, 2022</p>
       </div>
       <div class="ml-5 mt-4">
         <p class="text-sm text-gray-600">
-          As a Full Stack Developer at Byte Capsule Ltd, I optimized application
-          performance, developed and maintained a complex web application using
-          the MERN stack, and implemented new features on the front-end using
-          React. I collaborated with the product team to gather requirements and
-          helped to attract new customers with improved application speed and
-          reliability.
+          <!-- As a Operations Lead at Byte Capsule Ltd, I had to wear multiple hats
+          in the startup environment. I have provided Appliaction security
+          services to the clients, Teaches Cyber Security to thousands of
+          students, Improved companys operations attended various events as a
+          public speaker. I coccaborated with other team members to provide
+          customers their expected services. -->
+
+           During my tenure as an Operations Lead at Byte Capsule Ltd, I undertook
+          multifaceted responsibilities within the dynamic startup landscape. My
+          roles encompassed delivering comprehensive Application Security services
+          to our clients, educating and mentoring thousands of students in Cyber
+          Security, optimizing company operations, and participating as a keynote
+          speaker at diverse industry events. Collaborating seamlessly with cross-functional
+          teams, I ensured the seamless delivery of anticipated services to our valued
+          customers.
         </p>
       </div>
     </div>
