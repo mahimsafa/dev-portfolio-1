@@ -76,7 +76,7 @@ export const brands: Brand[] =[
     },
     {
         link:'https://www.impactoverse.com/',
-        logo:'https://www.impactoverse.com/assets/logo-5150ef21.png'
+        logo:'https://www.impactoverse.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblack.453c9090.png&w=256&q=75'
     },
     {
         link:'https://nailastoreparis.com/',
