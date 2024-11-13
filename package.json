@@ -15,6 +15,7 @@
 		"@astrojs/markdown-remark": "^2.0.1",
 		"@astrojs/solid-js": "^2.0.2",
 		"@astrojs/tailwind": "^3.0.1",
+		"@vercel/analytics": "^1.4.0",
 		"astro": "^2.0.12",
 		"astro-icon": "^0.8.0",
 		"date-fns": "^2.29.3",
